@@ -36,7 +36,8 @@ setup(
     platforms=['any'],
     install_requires=[
         "requests",
-        "ordereddict"
+        "ordereddict",
+        "fake-useragent"
     ],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
