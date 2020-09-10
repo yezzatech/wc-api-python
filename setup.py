@@ -35,9 +35,9 @@ setup(
     include_package_data=True,
     platforms=['any'],
     install_requires=[
-        "requests",
-        "ordereddict",
-        "fake-useragent"
+        "requests==2.22.0",
+        "ordereddict==1.1",
+        "fake-useragent==0.1.11"
     ],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
