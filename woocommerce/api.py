@@ -12,6 +12,7 @@ __license__ = "MIT"
 from requests import request
 from json import dumps as jsonencode
 from time import time
+from fake_useragent import FakeUserAgent
 from woocommerce.oauth import OAuth
 
 try:
@@ -19,6 +20,7 @@ try:
 except ImportError:
     from urllib import urlencode
 
+ua = FakeUserAgent()
 
 class API(object):
     """ API Class """
@@ -71,7 +73,7 @@ class API(object):
         url = self.__get_url(endpoint)
         auth = None
         headers = {
-            "user-agent": "WooCommerce API Client-Python/%s" % __version__,
+            "user-agent": ua.random,
             "accept": "application/json"
         }
 
